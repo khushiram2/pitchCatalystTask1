@@ -1,0 +1,24 @@
+.consulting-contract {
+    font-family: 'Arial', sans-serif;
+    margin: 20px;
+  }
+  
+  h2 {
+    color: #333;
+  }
+  
+  .section {
+    margin-bottom: 20px;
+  }
+  
+  .signature-section {
+    margin-top: 30px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    font-style: italic;
+  }
+  
+  .sign__image{
+    
+  }
+  
