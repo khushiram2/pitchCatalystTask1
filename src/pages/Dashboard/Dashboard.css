@@ -1,0 +1,14 @@
+.sidebar_container{
+    width: 300px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+.sidebar_container > div{
+    height: 40px;
+    width: 280px;
+    background-color: aqua;
+    text-align: center;
+}

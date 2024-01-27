@@ -1,15 +1,26 @@
-import { useState } from 'react'
 import './App.css'
-import ImageUploader from './Contract/Contract'
-import ConsultingContract from './Contract/ConsultingContract'
+import { Navigate, Route, Routes } from 'react-router-dom';
+import Login from './pages/login/Login';
+import Register from './pages/register/Register';
+import SubUserContact from './Contract/SubUserContact';
+import NewContractForm from './pages/NewContractForm/NewContractForm';
+import AllUserDetailsForOneContract from './pages/AllUserDetailsForOneContract/AllUserDetailsForOneContract';
+import NewContract from './Contract/new-contract';
 
 function App() {
-  const [processedImage, setProcessedImage] = useState(null);
   return (
-    <>
-    <ConsultingContract processedImage={processedImage} />
-      <ImageUploader processedImage={processedImage} setProcessedImage={setProcessedImage} />
-    </>
+    <div className='App'>
+    <Routes>
+      <Route path='/' element={<Navigate replace to="/login" />}/> 
+    <Route path="/login" element={<Login/>} />
+    <Route path="/register" element={<Register/>} />
+    <Route path='/new-conract' element={<NewContractForm/>}/>
+    <Route path="/contract/:id" element={<AllUserDetailsForOneContract/>}/>
+    <Route path="/sub-user/contract/:token" element={<SubUserContact/>}/>
+    <Route path='/test/:token' element={<NewContract/>}/>
+    </Routes>
+
+    </div>
   )
 }
 
